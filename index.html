@@ -15,8 +15,46 @@
 </head>
 
 <body>
-    
+    <form>
+        <label for="name">
+            Your Character Name:
+            <input type="text" name="name">
+            <legend>Pick Your Character:</legend>
+            <p id="characters">
+                <label>
+                    <input type="radio" name="type" required value="wizard">
+                    <img src="./assets/wizard.png" alt="wizard">
+                    Wizard
+                </label>
+                <label>
+                    <input type="radio" name="type" required value="troll">
+                    <img src="./assets/troll.png" alt="troll">
+                    Troll
+                </label>
+                <label>
+                    <input type="radio" name="type" required value="cloaked-hunter">
+                    <img src="./assets/herne-the-hunter.png" alt="cloaked-hunter">
+                    Kreepy Kloaked Hunter
+                </label>
+                <label>
+                    <input type="radio" name="type" required value="dwarf">
+                    <img src="./assets/dwarf.png" alt="dwarf">
+                    Dwarf
+                </label>
+                <label>
+                    <input type="radio" name="type" required value="elf">
+                    <img src="./assets/elf.png" alt="elf">
+                    Elf
+                </label>
+                
+            </p>
+        </label>
+    </form>
+
     <script type="module" src="./app.js"></script>
 </body>
 
+
+<!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from 
+    <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
 </html>
