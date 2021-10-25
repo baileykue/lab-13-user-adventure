@@ -1,5 +1,7 @@
 body {
     font-family: 'Cinzel Decorative', cursive;
+    background-image: url('../assets/paper-background.jpg');
+    background-repeat: no-repeat;
 }
 
 button {

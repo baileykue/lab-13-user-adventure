@@ -38,7 +38,7 @@ const tavern = {
             causing 50 hp damage.
         `,
         health: +25,
-        gold: 0
+        dabloons: 0
     }]
 };
 
@@ -59,115 +59,97 @@ const dragon = {
         id: 'negotiate',
         description: 'Negotiate with them',
         result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
+            something something
         `,
-        hp: 0,
-        gold: 35
+        health: 0,
+        dabloons: 0
     }, {
         id: 'fight',
         description: 'Fiiiiiggghhhttt!',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
+            something something
         `,
-        hp: -30,
-        gold: 50
+        health: 0,
+        dabloons: 0
     }, {
         id: 'run',
         description: 'Run away like good Sir Robin',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            something something
         `,
-        hp: -50,
-        gold: 0
+        health: -50,
+        dabloons: 0
     }]
 };
 
-const monsters = {
-    id: 'monsters',
-    title: 'A Den of Monsters',
+const pirates = {
+    id: 'pirates',
+    title: 'A Ship Of Pirates',
     map: {
-        top: '89%',
-        left: '44%'
+        top: '',
+        left: ''
     },
-    image: 'monsters.jpg',
+    image: 'pirate-ship.png',
+    icon: 'ship.png',
     description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
+        You enter the ship to be confronted by a group of troll pirates. They seem friendly, but are all brandishing weapons.
+        They ask you to join their crew. What do you do?
     `,
     choices: [{
         id: 'negotiate',
         description: 'Negotiate with them',
         result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
+            You get the feeling that if you agree to be part of the crew they're
+            just not going to respect you. In fact, if you stay they might eat you. 
+            You decide to off to stay for the day and help them fish. They shrug 
+            and agree. In turn they give you an old ass coin you've never seen before.
         `,
-        hp: 0,
-        gold: 35
+        health: 0,
+        dabloons: +5
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        id: 'join',
+        description: 'You Join the Crew',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
+        something something
         `,
-        hp: -30,
-        gold: 50
+        health: 0,
+        dabloons: 0
     }, {
         id: 'run',
         description: 'Run away like good Sir Robin',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            something something
         `,
-        hp: -50,
-        gold: 0
+        health: 0,
+        dabloons: 0
     }]
 };
 
-const dragon = {
-    id: 'dragon',
-    title: 'A HAIRY!!! Dragon',
+const market = {
+    id: 'market',
+    title: 'Trading Post',
     map: {
-        top: '17%',
-        left: '37%'
+        top: '',
+        left: ''
     },
-    image: 'dragon.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
+    image: '',
+    icon: '',
     description: `
-        You run to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        there will be a market
     `,
     choices: [{
         id: 'run',
         description: 'Get the hell out of the village',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            something something
         `,
-        hp: -35,
-        gold: 15
+        health: 0,
+        dabloons: 0
     }, {
         id: 'fight',
         description: 'Fiiiiiggghhhttt!',
         result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
+        something something
         `,
         hp: -45,
         gold: 0
@@ -175,13 +157,7 @@ const dragon = {
         id: 'archer',
         description: 'Emulate that guy from LOR who shot an arrow',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+        something something
         `,
         hp: 0,
         gold: 90
@@ -192,37 +168,37 @@ const treasure = {
     id: 'treasure',
     title: 'A Golden Treasure',
     map: {
-        top: '31%',
-        left: '5%'
+        top: '',
+        left: ''
     },
-    prerequisites: ['dragon', 'monsters'],
-    image: 'treasure-chests.png',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
+    image: 'treasure-trove.png',
+    icon: 'treasure-chest.png',
     description: `
-        As you enter the quest chamber you notice three chests before you.
+        As you enter the quest chamber you notice hella treasure before you.
         Just as you start to imagine the wealth, you see a giant serpent
         emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        but you have time to grab something before you scram! What do you choose?
     `,
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
+        id: 'jewels',
+        description: 'Rubies and Emeralds',
+        result: `You stuffed your pockets and made off with a lil bit of loot. You 
+        did end up cutting yourself on one of the jewels tho because they were sharp 
+        and you are clumsy`,
+        health: -5,
+        dabloons: +30
+    }, {
+        id: 'gold',
+        description: 'Miscellanious Gold Pieces',
+        result: 'You manage to grab a ton of gold and escape the snake! Today is your day. Celebrate',
         hp: 0,
-        gold: 40
+        gold: +50
     }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
-        hp: -50,
-        gold: 0
-    }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
-        hp: 35,
+        id: 'chest',
+        description: 'A Treasure Chest',
+        result: `You tried to carry this whole damn chest out with you and it was heavy, 
+        the snake definitely attacked you, so you eventually had to drop the chest and leave with nothing.`,
+        hp: -25,
         gold: 0
     }]
 };
@@ -230,7 +206,9 @@ const treasure = {
 const quests = [
     tavern,
     dragon,
-    
+    treasure,
+    market,
+    pirates
 ];
 
 export default quests;
