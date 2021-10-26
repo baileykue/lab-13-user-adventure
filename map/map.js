@@ -1,7 +1,9 @@
 import quests from '../data/quest-data.js';
+import { loadProfile } from '../utils.js';
+
+loadProfile();
 
 const mapLinks = document.getElementById('map-links');
-
 
 if (URLSearchParams.health <= 0){
     window.location.replace('../gameOver'); 

@@ -89,7 +89,7 @@ const pirates = {
         top: '25%',
         left: '45%'
     },
-    image: 'pirate-ship.png',
+    image: 'pirate-ship.jpg',
     icon: 'ship.png',
     description: `
         You enter the ship to be confronted by a group of troll pirates. They seem friendly, but are all brandishing weapons.

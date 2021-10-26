@@ -32,3 +32,40 @@ export function questScore(choiceObject, questId, userObject){
     userObject.dabloons += choiceObject.dabloons;
     userObject.completed[questId] = true;
 }
+
+export function isDead(user) {
+    return user.hp <= 0;
+}
+
+export function loadProfile() {
+    const userName = document.getElementById('user-name');
+    const userIcon = document.getElementById('user-icon');
+    const health = document.getElementById('health');
+    const dabloons = document.getElementById('dabloon');
+    const healthIcon = document.getElementById('health-icon');
+    const dabloonIcon = document.getElementById('dabloon-icon');
+    
+
+    const user = getUser();
+
+    if (!user) {
+        window.location = './';
+    }
+
+    userName.textContent = user.name;
+    userIcon.src = '../assets/' + user.type + '.png';
+    healthIcon.src = '../assets/healthcare.png';
+    dabloonIcon.src = '../assets/money.png';
+    dabloons.textContent = user.dabloons;
+
+
+    // if they're dead, say so in the header
+    if (isDead(user)) {
+        health.textContent = 'you have died';
+    }
+    else {
+        // otherwise show the user hp
+        health.textContent = user.health;
+    }
+
+}
