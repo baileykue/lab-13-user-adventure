@@ -13,3 +13,9 @@ for (let quest of quests){
 
     mapLinks.appendChild(a);
 }
+
+// want to display greyed out icon if the user has already been
+// to the think, perhaps do this like julie did
+// but instead of creating spans create icons and then style them as
+// grey in css 
+

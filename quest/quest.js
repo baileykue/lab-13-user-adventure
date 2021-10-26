@@ -1,5 +1,5 @@
 import quests from '../data/quest-data.js';
-import { findById } from '..utils';
+import { findById, setUser, getUser, questScore } from '..utils';
 
 const params = new URLSearchParams(window.location.search);
 const questData = findById(params.get('id'), quests);
@@ -24,5 +24,16 @@ for (let choice of questData.choices) {
 
 questChoices.addEventListener('submit', (e)=>{
     e.preventDefault();
-    
-})
+
+    const selected = document.querySelector('input[type="radio"]:checked');
+    const choice = findById(selected.value, questData.choices);
+
+    const user = getUser();
+
+    questScore(choice, questData.id, user);
+
+    setUser(user);
+
+
+
+});

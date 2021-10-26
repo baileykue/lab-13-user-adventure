@@ -49,7 +49,7 @@ const dragon = {
         top: '',
         left: ''
     },
-    image: '',
+    image: 'dragon-cliffs.jpg',
     icon: 'dragon.png',
     description: `
         You enter the Dragon\'s Lair only to be confronted by a hoard of
