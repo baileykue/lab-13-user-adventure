@@ -1,3 +1,15 @@
 body {
     font-family: 'Cinzel Decorative', cursive;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    }
+
+img {
+    width: 1000px;
+}
+
+#quest-choices {
+    display: flex;
+    flex-direction: column;
 }

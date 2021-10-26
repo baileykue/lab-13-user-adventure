@@ -4,7 +4,6 @@ body {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     text-align: center;
     align-items: center;
     padding: 10px;
@@ -17,19 +16,13 @@ input {
     text-align: center;
     justify-content: space-between;
     font-family: 'Cinzel Decorative', cursive;
-    padding: 5px;
-}
-
-#user-form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
+    margin: 25px;
 }
 
 img {
     width: 10rem;
     background-repeat: no-repeat;
+    margin: 10px;
 }
 
 button {
@@ -37,6 +30,7 @@ button {
     background-color: transparent;
     border-radius: 15px;
     padding: 10px;
+    margin: 25px;
 }
 
 input[type=radio] {
@@ -45,4 +39,13 @@ input[type=radio] {
 
 input[type=radio]:checked + img {
     box-shadow: 0px 0px 80px 80px rgb(49, 56, 56);
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
 }

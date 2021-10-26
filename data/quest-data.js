@@ -171,7 +171,7 @@ const treasure = {
         top: '',
         left: ''
     },
-    image: 'treasure-trove.png',
+    image: 'treasure-trove.jpg',
     icon: 'treasure-chest.png',
     description: `
         As you enter the quest chamber you notice hella treasure before you.
