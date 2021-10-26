@@ -83,3 +83,4 @@ test('questScore should update dabloons, health, and completed on the userObject
     expect.equal(userObject.completed[questId], true);
 
 });
+

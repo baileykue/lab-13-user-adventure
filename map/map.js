@@ -28,9 +28,8 @@ function displayLinkIcon(quest){
     icon.src = `../assets/${quest.icon}`;
     icon.classList.add('icons');
     
-    // trying to add positioning to icon links on the map
-    //     icon.style = quest.map;
-    //    console.log(quest.map);
+    a.style.top = quest.map.top;
+    a.style.left = quest.map.left;
     
     a.append(icon);
     
@@ -39,11 +38,18 @@ function displayLinkIcon(quest){
 }
 
 function displayGreyIcon(quest){
+    const a = document.createElement('a');
+    
     const icon = document.createElement('img');
     icon.src = `../assets/${quest.icon}`;
     icon.classList.add('grey');
 
-    mapLinks.append(icon);
+    a.style.top = quest.map.top;
+    a.style.left = quest.map.left;
+
+    a.append(icon);
+
+    mapLinks.append(a);
 }
 // want to display greyed out icon if the user has already been
 // to the think, perhaps do this like julie did
