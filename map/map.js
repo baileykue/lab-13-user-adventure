@@ -2,6 +2,12 @@ import quests from '../data/quest-data.js';
 
 const mapLinks = document.getElementById('map-links');
 
+
+if(URLSearchParams.health <= 0){
+    window.location.replace('../gameOver'); 
+}
+
+
 for (let quest of quests){
     const a = document.createElement('a');
     a.href = `../quest/?id=${quest.id}`;
