@@ -15,6 +15,10 @@ for (let quest of quests){
     const icon = document.createElement('img');
     icon.src = `../assets/${quest.icon}`;
     icon.classList.add('icons');
+  
+  // trying to add positioning to icon links on the map
+//     icon.style = quest.map;
+//    console.log(quest.map);
 
     a.append(icon);
 

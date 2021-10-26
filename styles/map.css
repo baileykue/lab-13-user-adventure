@@ -10,9 +10,14 @@ body {
 #map-links {
 	background-image: url('../assets/map.jpeg');
 	background-repeat: no-repeat;
-	background-size: 75%;
+	background-size: 100%;
+	width: 800px;
+	height: 500px;
 	text-align: center;
-	width: 75%;
 	border: 2px solid black;
+}
 
+.icons {
+	border: 2px solid black;
+	width: 85px;
 }

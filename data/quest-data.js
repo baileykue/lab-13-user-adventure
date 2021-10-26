@@ -2,8 +2,8 @@ const tavern = {
     id: 'tavern',
     title: 'The Local Tavern',
     map: {
-        top: '',
-        left: ''
+        top: '17px',
+        left: '37px'
     },
     image: 'tavern.jpg',
     icon: 'table.png',
@@ -46,8 +46,8 @@ const dragon = {
     id: 'dragon',
     title: 'A Dragon\'s Lair',
     map: {
-        top: '',
-        left: ''
+        top: '50%',
+        left: '50%'
     },
     image: 'dragon-cliffs.jpg',
     icon: 'dragon.png',
@@ -86,8 +86,8 @@ const pirates = {
     id: 'pirates',
     title: 'A Ship Of Pirates',
     map: {
-        top: '',
-        left: ''
+        top: '25%',
+        left: '45%'
     },
     image: 'pirate-ship.png',
     icon: 'ship.png',
@@ -129,8 +129,8 @@ const market = {
     id: 'market',
     title: 'Trading Post',
     map: {
-        top: '',
-        left: ''
+        top: '89%',
+        left: '44%'
     },
     image: 'market.jpg',
     icon: 'market-vender.png',
@@ -168,8 +168,8 @@ const treasure = {
     id: 'treasure',
     title: 'A Golden Treasure',
     map: {
-        top: '',
-        left: ''
+        top: '14%',
+        left: '88%'
     },
     image: 'treasure-trove.jpg',
     icon: 'treasure-chest.png',
