@@ -30,3 +30,20 @@ button {
     padding: 10px;
     margin: 25px;
 }
+
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#user-icon {
+	width: 15%;
+	margin: 25px;
+}
+
+#health-icon, #dabloon-icon {
+	text-align: center;
+	width: 5%;
+	padding-left: 25px;
+}
