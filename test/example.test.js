@@ -71,7 +71,7 @@ test('questScore should update dabloons, health, and completed on the userObject
             for his brutal force. 
         `,
         health: -30,
-        dabloons: 0
+        dabloons: 25
     };
 
     const questId = 'tavern';
@@ -79,7 +79,7 @@ test('questScore should update dabloons, health, and completed on the userObject
     questScore(choiceObject, questId, userObject);
 
     expect.equal(userObject.health, 20);
-    expect.equal(userObject.dabloons, 0);
+    expect.equal(userObject.dabloons, 25);
     expect.equal(userObject.completed[questId], true);
 
 });

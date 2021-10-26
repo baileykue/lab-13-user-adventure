@@ -34,10 +34,9 @@ const tavern = {
         id: 'nap',
         description: 'Take a nap in the corner booth',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            You have chosen wisely. This rest has done you good, and you add to your health.
         `,
-        health: +25,
+        health: 25,
         dabloons: 0
     }]
 };
@@ -105,7 +104,7 @@ const pirates = {
             and agree. In turn they give you an old ass coin you've never seen before.
         `,
         health: 0,
-        dabloons: +5
+        dabloons: 5
     }, {
         id: 'join',
         description: 'You Join the Crew',
@@ -186,13 +185,13 @@ const treasure = {
         did end up cutting yourself on one of the jewels tho because they were sharp 
         and you are clumsy`,
         health: -5,
-        dabloons: +30
+        dabloons: 30
     }, {
         id: 'gold',
         description: 'Miscellanious Gold Pieces',
         result: 'You manage to grab a ton of gold and escape the snake! Today is your day. Celebrate',
         hp: 0,
-        gold: +50
+        gold: 50
     }, {
         id: 'chest',
         description: 'A Treasure Chest',

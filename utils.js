@@ -1,3 +1,5 @@
+import quests from '../data/quest-data.js';
+
 export function generateUser(formData){
     return {
         completed: {},
@@ -31,6 +33,15 @@ export function questScore(choiceObject, questId, userObject){
     userObject.health += choiceObject.health;
     userObject.dabloons += choiceObject.dabloons;
     userObject.completed[questId] = true;
+}
+
+export function hasCompletedAllQuests(userObject){
+    for (let quest of quests){
+        if (!userObject.completed[quest.id]){
+            return false;
+        }
+    }
+    return true;
 }
 
 export function isDead(user) {
@@ -69,3 +80,4 @@ export function loadProfile() {
     }
 
 }
+

@@ -38,3 +38,9 @@ header {
 	width: 5%;
 	padding-left: 25px;
 }
+
+.grey {
+	border: 2px solid black;
+	width: 85px;
+	filter: grayscale(100%);
+}

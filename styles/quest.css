@@ -47,3 +47,7 @@ header {
 	width: 5%;
 	padding-left: 25px;
 }
+
+.hidden {
+    display: none;
+}

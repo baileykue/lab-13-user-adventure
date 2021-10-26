@@ -64,4 +64,6 @@ questChoices.addEventListener('submit', (e)=>{
     mapLink.textContent = 'Back To The Map';
 
     questResults.append(resultsP, mapLink);
+
+    questResults.classList.remove('hidden');
 });
