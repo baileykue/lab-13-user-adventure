@@ -1,4 +1,4 @@
-import { generateUser, setUser } from '../utils.js';
+import { generateUser, setUser, getUser, questScore } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -35,4 +35,51 @@ test('setUser should save user to localStorage', (expect)=>{
     const actual = JSON.parse(localStorage.getItem('USER'));
 
     expect.deepEqual(actual, userObject);
+});
+
+test('getUser should return the user object from localStorage', (expect)=>{
+    const userObject = { 
+        completed: {},
+        dabloons: 0,
+        health: 50,
+        name: 'bailey',
+        type: 'elf',
+    };
+
+    setUser(userObject);
+
+    const actual = getUser();
+
+    expect.deepEqual(actual, userObject);
+});
+
+test('questScore should update dabloons, health, and completed on the userObject', (expect)=>{
+    const userObject = { 
+        completed: {},
+        dabloons: 0,
+        health: 50,
+        name: 'bailey',
+        type: 'elf',
+    };
+
+    const choiceObject = {
+        id: 'fight',
+        description: 'Get rowdy and start a fight with the biggest baddest guy at the bar',
+        result: `
+            You throw a punch at the guy, and it lands on his unflinching face. He 
+            then takes out his knife and cuts off your finger. You struggle but are no match 
+            for his brutal force. 
+        `,
+        health: -30,
+        dabloons: 0
+    };
+
+    const questId = 'tavern';
+
+    questScore(choiceObject, questId, userObject);
+
+    expect.equal(userObject.health, 20);
+    expect.equal(userObject.dabloons, 0);
+    expect.equal(userObject.completed[questId], true);
+
 });
