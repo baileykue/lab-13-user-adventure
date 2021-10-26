@@ -3,7 +3,7 @@ import quests from '../data/quest-data.js';
 const mapLinks = document.getElementById('map-links');
 
 
-if(URLSearchParams.health <= 0){
+if (URLSearchParams.health <= 0){
     window.location.replace('../gameOver'); 
 }
 
@@ -14,6 +14,7 @@ for (let quest of quests){
     
     const icon = document.createElement('img');
     icon.src = `../assets/${quest.icon}`;
+    icon.classList.add('icons');
 
     a.append(icon);
 

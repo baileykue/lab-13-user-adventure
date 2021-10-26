@@ -132,8 +132,8 @@ const market = {
         top: '',
         left: ''
     },
-    image: '',
-    icon: '',
+    image: 'market.jpg',
+    icon: 'market-vender.png',
     description: `
         there will be a market
     `,
