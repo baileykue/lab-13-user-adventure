@@ -43,7 +43,7 @@ const tavern = {
 
 const dragon = {
     id: 'dragon',
-    title: 'A Dragon\'s Lair',
+    title: 'A Dragon Encounter',
     map: {
         top: '50%',
         left: '50%'
@@ -51,32 +51,46 @@ const dragon = {
     image: 'dragon-cliffs.jpg',
     icon: 'dragon.png',
     description: `
-        You enter the Dragon\'s Lair only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
+        You are on your way out of town and stop by a stream to get a drink of water. 
+        You suddenly hear large wings flapping and look up to see a Dragon! He is also
+        coming to the stream to wet his whistle. What do you do?
     `,
     choices: [{
-        id: 'negotiate',
-        description: 'Negotiate with them',
+        id: 'ride',
+        description: 'Try and ride the Dragon',
         result: `
-            something something
+            This Dragon seems chill, so you climb the cliff and try to get onto his back. 
+            You are not very sneaky, so he sees you, and flicks you away. You fall onto some
+            rocks in the stream. 
         `,
-        health: 0,
+        health: -25,
         dabloons: 0
     }, {
         id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        description: 'Fight that bish',
         result: `
-            something something
+            You die. Dude you can't fight a Dragon, you definitely died
+            right away. He swallowed you whole.
         `,
-        health: 0,
+        health: -75,
+        dabloons: 0
+    }, {
+        id: 'vibe',
+        description: 'Try and have a good chat with the Dragon, maybe befriend him',
+        result: `
+            The dragon appreciates having someone to talk to, he gives you three
+            of his tears, which have healing powers.
+        `,
+        health: 15,
         dabloons: 0
     }, {
         id: 'run',
-        description: 'Run away like good Sir Robin',
+        description: 'Run away and hope no one sees you',
         result: `
-            something something
+            Well there's nothing wrong with just avoiding that situation. 
+            You do you.
         `,
-        health: -50,
+        health: 0,
         dabloons: 0
     }]
 };
@@ -109,10 +123,13 @@ const pirates = {
         id: 'join',
         description: 'You Join the Crew',
         result: `
-        something something
+        You join the crew only to find you that your job is mopping the deck.
+        The rest of the crew goes out to rob some guys and they come back with
+        really cool stuff. They throw you some coin, but you're still jealous
+        of all their cool new swag.  
         `,
         health: 0,
-        dabloons: 0
+        dabloons: 25
     }, {
         id: 'run',
         description: 'Run away like good Sir Robin',

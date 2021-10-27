@@ -16,6 +16,8 @@ body {
 	height: 500px;
 	text-align: center;
 	position: relative;
+	box-shadow: 5px 5px black;
+	margin-bottom: 50px;
 }
 
 #map-links a {

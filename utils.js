@@ -18,7 +18,6 @@ export function setUser(userObject){
 export function getUser(){
     const userString = localStorage.getItem('USER');
     return JSON.parse(userString);
-
 }
 
 export function findById(id, items){
@@ -70,13 +69,10 @@ export function loadProfile() {
     dabloonIcon.src = '../assets/money.png';
     dabloons.textContent = user.dabloons;
 
-
-    // if they're dead, say so in the header
     if (isDead(user)) {
         health.textContent = 'you have died';
     }
     else {
-        // otherwise show the user hp
         health.textContent = user.health;
     }
 
