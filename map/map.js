@@ -9,7 +9,7 @@ const user = getUser();
 
 if (isDead(user) || hasCompletedAllQuests(user)){
     window.location.replace('../endgame'); 
-}
+} 
 
 for (let quest of quests){
     if (user.completed[quest.id]){
