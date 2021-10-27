@@ -1,5 +1,5 @@
-import quests from '../data/quest-data.js';
-import { hasCompletedAllQuests, loadProfile, getUser, isDead } from '../utils.js';
+import quests from './data/quest-data.js';
+import { hasCompletedAllQuests, loadProfile, getUser, isDead } from './utils.js';
 
 loadProfile();
 
