@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/endgame.css">
+    <title>End Game</title>
 </head>
 <body>
-    <h1>Game Over!</h1>
+    <main>
+        <h1>Game Over!</h1>
+        <img id="user-icon">
+        <h1 id="user-name"></h1>
+        <div>
+            <img id="health-icon">
+            <span class="profile-stat-label">health: </span>
+            <span id="health"></span>
+            <img id="dabloon-icon">
+            <span class="profile-stat-label">dabloons: </span>
+            <span id="dabloon"></span>
+        </div>
+        <p>
+            You Played a good game. 
+        </p>
+    </main>
     
     <script type="module" src="./endgame.js"></script>
 </body>

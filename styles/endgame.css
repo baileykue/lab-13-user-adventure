@@ -1,0 +1,26 @@
+body {
+    font-family: 'Cinzel Decorative', cursive;
+    background-image: url('../assets/paper-background.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#user-icon {
+    width: 350px;
+}
+
+#health-icon, #dabloon-icon {
+    width: 100px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}

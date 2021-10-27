@@ -1,1 +1,5 @@
-console.log('this is the end');
+import { loadProfile } from '../utils.js';
+
+loadProfile();
+
+console.log(loadProfile());

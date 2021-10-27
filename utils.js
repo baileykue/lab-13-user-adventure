@@ -71,6 +71,7 @@ export function loadProfile() {
 
     if (isDead(user)) {
         health.textContent = 'you have died';
+        dabloons.textContent = user.dabloons;
     }
     else {
         health.textContent = user.health;
