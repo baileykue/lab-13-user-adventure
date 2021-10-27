@@ -131,12 +131,13 @@ const pirates = {
         health: 0,
         dabloons: 25
     }, {
-        id: 'run',
-        description: 'Run away like good Sir Robin',
+        id: 'jump',
+        description: 'You choose to jump off the side of the boat',
         result: `
-            something something
+            You escape easily, but the jump into the ice cold water
+            took the wind out of your sails.
         `,
-        health: 0,
+        health: -5,
         dabloons: 0
     }]
 };
