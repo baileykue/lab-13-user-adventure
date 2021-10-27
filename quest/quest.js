@@ -1,6 +1,6 @@
-import quests from './data/quest-data.js';
-import { findById, setUser, getUser, questScore } from './utils.js';
-import { loadProfile } from './utils.js';
+import quests from '../data/quest-data.js';
+import { findById, setUser, getUser, questScore } from '../utils.js';
+import { loadProfile } from '../utils.js';
 
 loadProfile();
 
@@ -48,13 +48,11 @@ questChoices.addEventListener('submit', (e)=>{
     const choice = findById(selected.value, questData.choices);
     
     const user = getUser();
-    console.log(user.health);
 
     questScore(choice, questData.id, user);
 
     setUser(user);
     
-    console.log(user.health);
     loadProfile();
 
     const questDetails = document.getElementById('quest-details');
