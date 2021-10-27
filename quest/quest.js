@@ -16,7 +16,6 @@ img.src = `../assets/${questData.image}`;
 const descritption = document.getElementById('quest-description');
 descritption.textContent = questData.description;
 
-
 const questChoices = document.getElementById('quest-choices');
 
 for (let choice of questData.choices) {
@@ -44,14 +43,19 @@ questChoices.append(button);
 questChoices.addEventListener('submit', (e)=>{
     e.preventDefault();
 
+    
     const selected = document.querySelector('input[type="radio"]:checked');
     const choice = findById(selected.value, questData.choices);
-
+    
     const user = getUser();
+    console.log(user.health);
 
     questScore(choice, questData.id, user);
 
     setUser(user);
+    
+    console.log(user.health);
+    loadProfile();
 
     const questDetails = document.getElementById('quest-details');
     questDetails.classList.add('hidden');

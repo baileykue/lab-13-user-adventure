@@ -18,6 +18,7 @@ export function setUser(userObject){
 export function getUser(){
     const userString = localStorage.getItem('USER');
     return JSON.parse(userString);
+
 }
 
 export function findById(id, items){
@@ -45,7 +46,7 @@ export function hasCompletedAllQuests(userObject){
 }
 
 export function isDead(user) {
-    return user.hp <= 0;
+    return user.health <= 0;
 }
 
 export function loadProfile() {

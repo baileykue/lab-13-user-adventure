@@ -1,5 +1,5 @@
 import quests from '../data/quest-data.js';
-import { hasCompletedAllQuests, loadProfile, getUser } from '../utils.js';
+import { hasCompletedAllQuests, loadProfile, getUser, isDead } from '../utils.js';
 
 loadProfile();
 
@@ -7,8 +7,8 @@ const mapLinks = document.getElementById('map-links');
 
 const user = getUser();
 
-if (URLSearchParams.health <= 0 || hasCompletedAllQuests(user)){
-    window.location.replace('../gameOver'); 
+if (isDead(user) || hasCompletedAllQuests(user)){
+    window.location.replace('../endgame'); 
 }
 
 for (let quest of quests){
@@ -18,7 +18,6 @@ for (let quest of quests){
         displayLinkIcon(quest);
     }
 }
-
 
 function displayLinkIcon(quest){
     const a = document.createElement('a');
@@ -51,8 +50,4 @@ function displayGreyIcon(quest){
 
     mapLinks.append(a);
 }
-// want to display greyed out icon if the user has already been
-// to the think, perhaps do this like julie did
-// but instead of creating spans create icons and then style them as
-// grey in css 
 
