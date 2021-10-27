@@ -143,7 +143,7 @@ const pirates = {
 
 const market = {
     id: 'market',
-    title: 'Trading Post',
+    title: 'The Market',
     map: {
         top: '75%',
         left: '69%'
@@ -151,32 +151,34 @@ const market = {
     image: 'market.jpg',
     icon: 'market-vender.png',
     description: `
-        there will be a market
+        You happen upon a market. Theres tons of cool stuff around. which
+        booth do you choose to visit?
     `,
     choices: [{
-        id: 'run',
-        description: 'Get the hell out of the village',
+        id: 'fruit',
+        description: 'Get yourself some Fruit',
         result: `
-            something something
+            You got to eat some majestical fruit!
+        `,
+        health: 5,
+        dabloons: -5
+    }, {
+        id: 'rum',
+        description: 'Take a shot of Rum with the vendors',
+        result: `
+        Woo! You totally bonded with the vendors. But the Rum was strong and
+        you can't seem to walk straight now. 
+        `,
+        health: -5,
+        dabloons: -5
+    }, {
+        id: 'basket',
+        description: 'Learn how to weave a basket',
+        result: `
+        You wove a totally dope basket. 
         `,
         health: 0,
-        dabloons: 0
-    }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-        something something
-        `,
-        hp: -45,
-        gold: 0
-    }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
-        result: `
-        something something
-        `,
-        hp: 0,
-        gold: 90
+        dabloons: -5
     }]
 };
 
@@ -207,15 +209,15 @@ const treasure = {
         id: 'gold',
         description: 'Miscellanious Gold Pieces',
         result: 'You manage to grab a ton of gold and escape the snake! Today is your day. Celebrate',
-        hp: 0,
-        gold: 50
+        health: 0,
+        dabloons: 50
     }, {
         id: 'chest',
         description: 'A Treasure Chest',
         result: `You tried to carry this whole damn chest out with you and it was heavy, 
         the snake definitely attacked you, so you eventually had to drop the chest and leave with nothing.`,
-        hp: -25,
-        gold: 0
+        health: -25,
+        dabloons: 0
     }]
 };
 
