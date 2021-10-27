@@ -1,0 +1,53 @@
+body {
+    font-family: 'Cinzel Decorative', cursive;
+    background-image: url('../assets/paper-background.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    }
+
+img {
+    width: 1000px;
+}
+
+#quest-choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin: 20px;
+}
+
+button {
+    font-family: 'Cinzel Decorative', cursive;
+    width: 125px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 25px;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#user-icon {
+	width: 15%;
+	margin: 25px;
+}
+
+#health-icon, #dabloon-icon {
+	text-align: center;
+	width: 5%;
+	padding-left: 25px;
+}
+
+.hidden {
+    display: none;
+}

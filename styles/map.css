@@ -1,0 +1,55 @@
+body {
+	font-family: 'Cinzel Decorative', cursive;
+	background-image: linear-gradient(to bottom right,#e4c081 , #776141);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+#map-links {
+	background-image: url('../assets/map.jpeg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 800px;
+	height: 500px;
+	text-align: center;
+	position: relative;
+	box-shadow: 5px 5px black;
+	margin-bottom: 50px;
+}
+
+#map-links a {
+	position: absolute;
+}
+
+.icons {
+	width: 85px;
+}
+
+.icons:hover {
+	width: 95px;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#user-icon {
+	width: 15%;
+	margin: 25px;
+}
+
+#health-icon, #dabloon-icon {
+	text-align: center;
+	width: 5%;
+	padding-left: 25px;
+}
+
+.grey {
+	width: 85px;
+	filter: grayscale(100%);
+}
