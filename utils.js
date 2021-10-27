@@ -69,8 +69,6 @@ export function loadProfile() {
     dabloonIcon.src = '../assets/money.png';
     dabloons.textContent = user.dabloons;
 
-    console.log(user);
-
     if (isDead(user)) {
         health.textContent = 'you have died';
         dabloons.textContent = user.dabloons;
