@@ -1,4 +1,4 @@
-import quests from '../data/quest-data.js';
+import quests from './data/quest-data.js';
 
 export function generateUser(formData){
     return {

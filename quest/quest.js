@@ -1,6 +1,6 @@
-import quests from '../data/quest-data.js';
-import { findById, setUser, getUser, questScore } from '../utils.js';
-import { loadProfile } from '../utils.js';
+import quests from './data/quest-data.js';
+import { findById, setUser, getUser, questScore } from './utils.js';
+import { loadProfile } from './utils.js';
 
 loadProfile();
 
