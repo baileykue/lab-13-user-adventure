@@ -11,3 +11,5 @@ if (isDead(user)) {
 } else { 
     result.textContent = outcome[1].title; 
 }   
+
+

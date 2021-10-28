@@ -38,7 +38,8 @@ input[type=radio] {
 }
 
 input[type=radio]:checked + img {
-    box-shadow: 0px 0px 80px 80px rgb(49, 56, 56);
+    filter: drop-shadow(20px 20px 4px rgb(49, 56, 56));
+    /* //box-shadow: 0px 0px 80px 80px rgb(49, 56, 56); */
 }
 
 label {
